@@ -1,0 +1,93 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.main-game {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #eef;
+}
+
+.message-modal {
+    display: none;
+    position: absolute;
+    z-index: 1;
+
+    background-color: #fff;
+    border: 1px solid;
+    padding: 1em;
+
+    box-shadow: 0px 0px 10px 0px black;
+}
+
+.message-modal.visible {
+    display: block;
+}
+
+.message-modal > .message {
+    padding: 1em;
+    border: 1px dashed;
+
+    background-color: #eee;
+}
+
+.genios-game {
+    display: grid;
+    grid-template-areas: "green red" "yellow blue";
+    gap: 10px;
+
+    width: 80vmin;
+    height: 80vmin;
+
+    border: 10px solid #fff;
+    border-radius: 100%;
+
+    background-color: #fff;
+
+    box-shadow: 0px 0px 25px -10px black;
+}
+
+.blue,.red,.green,.yellow {
+    opacity: .25s;
+    transition: opacity .25s, transform .25s;
+}
+
+.blue {
+    grid-area: blue;
+    background-color: blue;
+
+    border-bottom-right-radius: 100%;
+}
+
+.red {
+    grid-area: red;
+    background-color: red;
+    
+    border-top-right-radius: 100%;
+}
+
+.green {
+    grid-area: green;
+    background-color: green;
+    
+    border-top-left-radius: 100%;
+}
+
+.yellow {
+    grid-area: yellow;
+    background-color: yellow;
+    
+    border-bottom-left-radius: 100%;
+}
+
+.selected {
+    transform: scale(1.02, 1.02);
+    opacity: 0.2;
+}
